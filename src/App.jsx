@@ -2,10 +2,11 @@ import React, { useState } from "react";
 import "./App.css"
 import AddTask from "./components/AddTask";
 import Tasks from "./components/Tasks";
+import {v4 as uuidv4} from "uuid"
 
 const App = () => {
   // let message = "Hello, World!";
-  const [tasks, setTaks] = useState([
+  const [tasks, setTasks] = useState([
     {
       id: "1",
       title: "Tarefa 1",
@@ -17,10 +18,20 @@ const App = () => {
       completed: true
     }
   ]);
+
+  const handleTaskAddition = (taskTitle) => {
+    const newTask = [...tasks, {
+      title: taskTitle,
+      id: uuidv4(),
+      completed: false
+    }];
+
+    setTasks(newTask);
+  }
   return (
     <>
       <div className="container">
-        <AddTask/>
+        <AddTask handleTaskAddition={handleTaskAddition} />
         <Tasks tasks={tasks}/>
       </div>
     </>
