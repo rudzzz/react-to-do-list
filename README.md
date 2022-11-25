@@ -8,7 +8,6 @@
 
 ## Languages used :books:
 
-- [React]
 - [JavaScript]
 - [HTML]
 - [CSS]
