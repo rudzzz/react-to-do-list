@@ -10,3 +10,9 @@
     font-weight: bold;
     border: none;
 }
+
+.add-task-button:hover{
+    background-color: #444;
+    color: rgb(187, 192, 42);
+    transition: all 0.5s ease;
+}
