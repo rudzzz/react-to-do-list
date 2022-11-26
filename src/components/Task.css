@@ -1,5 +1,5 @@
 .task-container{
-    background-color: rgb(187, 192, 42);
+    background-color: #444;
     margin: 8px 0;
     padding: 15px 20px;
     display: flex;
@@ -7,5 +7,15 @@
     justify-content: space-between;
     color: #eee;
     align-items: center;
+}
+
+.task-title{
     cursor: pointer;
+}
+
+.remove-task, .task-detail{
+    background-color: #444;
+    border: none;
+    color: rgb(187, 192, 42);
+    font-size: 24px;
 }
